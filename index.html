@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Fin-Sight Pro - AI-Powered Credit Risk Analysis</title>
+    <meta charset="utf-8-sig" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #wrapper {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .risk-assessment-form {
+            margin-top: 20px;
+        }
+        .risk-assessment-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .risk-assessment-form input, .risk-assessment-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .risk-assessment-form button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .risk-assessment-form button:hover {
+            background-color: #218838;
+        }
+        #risk-results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1><a href="index.html">Fin-Sight Pro</a></h1>
+            <nav class="links">
+                <ul>
+                    <li><a href="#dashboard" aria-label="Dashboard">Dashboard</a></li>
+                    <li><a href="#analysis" aria-label="Risk Analysis">Risk Analysis</a></li>
+                    <li><a href="#about" aria-label="About">About</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="main">
+            <section class="post" id="dashboard">
+                <header>
+                    <div class="title">
+                        <h2><a>Dashboard</a></h2>
+                        <p>AI-Powered Credit Risk Assessment</p>
+                    </div>
+                </header>
+                <p>Fin-Sight Pro utilizes advanced AI to analyze credit risk, helping banks make informed decisions on credit card issuance and loan extensions. Our model boasts an impressive 85% accuracy rate.</p>
+                <div class="risk-assessment-form">
+                    <h3>Enter Customer Information</h3>
+                    <form id="risk-form">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" required placeholder="e.g., 45">
+
+                        <label for="education">Education Level:</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select</option>
+                            <option value="0">High School</option>
+                            <option value="1">Undergraduate</option>
+                            <option value="2">Graduate</option>
+                            <option value="3">Postgraduate</option>
+                            <option value="4">Doctorate</option>
+                            <option value="5">Other</option>
+                        </select>
+
+                        <label for="employed">Employment Status:</label>
+                        <select id="employed" name="employed" required>
+                            <option value="">Select</option>
+                            <option value="0">Unemployed</option>
+                            <option value="1">Employed</option>
+                        </select>
+
+                        <label for="address">Address Type:</label>
+                        <input type="number" id="address" name="address" required placeholder="e.g., 1 for Home, 2 for Office">
+
+                        <label for="income">Annual Income:</label>
+                        <input type="number" id="income" name="income" required placeholder="e.g., 60000">
+
+                        <label for="debtincome">Debt-to-Income Ratio:</label>
+                        <input type="number" id="debtincome" name="debtincome" step="0.01" required placeholder="e.g., 0.10">
+
+                        <label for="creddebt">Credit Card Debt:</label>
+                        <input type="number" id="creddebt" name="creddebt" required placeholder="e.g., 1200">
+
+                        <label for="otherdebt">Other Debt:</label>
+                        <input type="number" id="otherdebt" name="otherdebt" required placeholder="e.g., 3000">
+
+                        <button type="button" onclick="submitForm()">Analyze Risk</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="post" id="analysis">
+                <header>
+                    <div class="title">
+                        <h2><a>Risk Analysis Results</a></h2>
+                        <p>AI-Generated Risk Assessment</p>
+                    </div>
+                </header>
+                <div id="risk-results">
+                    <p id="results">Results will be displayed here...</p>
+                </div>
+            </section>
+        </div>
+
+        <section id="sidebar">
+            <section id="intro">
+                <header>
+                    <h2>Fin-Sight Pro</h2>
+                    <p>AI-Powered Credit Risk Analysis</p>
+                </header>
+            </section>
+
+            <section id="features">
+                <header>
+                    <h2>Key Features</h2>
+                </header>
+                <ul>
+                    <li>85% Accuracy Rate</li>
+                    <li>8-Factor Risk Assessment</li>
+                    <li>RobustScaler for Precise Predictions</li>
+                    <li>Instant Credit Worthiness Evaluation</li>
+                </ul>
+            </section>
+
+            <section class="blurb" id="about">
+                <h2>About Fin-Sight Pro</h2>
+                <p>Fin-Sight Pro is an advanced AI-powered platform designed to assist banks in assessing credit risk. By analyzing 8 key factors, our model provides accurate predictions on whether to issue credit cards or extend loans to customers.</p>
+            </section>
+
+            <section id="footer">
+                <ul class="icons">
+                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                <p class="copyright">&copy; 2024 Fin-Sight Pro. All rights reserved.</p>
+            </section>
+        </section>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('risk-form');
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById('results').textContent = `Prediction: ${result.prediction === 1 ? 'High Risk' : 'Low Risk'}`;
+            })
+            .catch(error => {
+                document.getElementById('results').textContent = 'An error occurred while analyzing the risk. Please try again.';
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
