@@ -1,12 +1,12 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 import joblib
 import numpy as np
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
+app = Flask(__name__, static_folder='static/headstarter-hackathon-main')
 
 # Paths to the model and scaler
-model_path = '/Users/srinivasareddypadala/Desktop/Credit_Risk_Analysis_for_extending_Bank_Loans/CreditRiskModelDeployment/models/Credit_Risk_Analysis_for_extending_Bank_Loans.pkl'
-scaler_path = '/Users/srinivasareddypadala/Desktop/Credit_Risk_Analysis_for_extending_Bank_Loans/CreditRiskModelDeployment/models/RobustScaler.pkl'
+model_path = '/path/to/Credit_Risk_Analysis_for_extending_Bank_Loans.pkl'
+scaler_path = '/path/to/RobustScaler.pkl'
 
 # Load the pre-trained model and scaler
 model = joblib.load(model_path)
@@ -14,7 +14,7 @@ scaler = joblib.load(scaler_path)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return send_from_directory('static/headstarter-hackathon-main', 'index.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
